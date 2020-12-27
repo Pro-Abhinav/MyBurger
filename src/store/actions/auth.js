@@ -30,9 +30,9 @@ export const auth = (email, password, isSignup) => {
             returnSecureToken: true
         }
 
-        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyByQ7-ovRdgOipN85bxKTH8P54GMtxNVZM';
+        let url = '';
         if(!isSignup){
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyByQ7-ovRdgOipN85bxKTH8P54GMtxNVZM'
+            url = ''
         }
         axios.post(url, authData)
             .then(response => {
